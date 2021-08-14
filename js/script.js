@@ -1,5 +1,5 @@
 
-// add task
+/*--------- add task---------- */
 
 const inputText= document.getElementById("input-form");
 const unList=document.getElementById("uncomplete-list")
@@ -24,6 +24,7 @@ document.querySelector(".btn").onclick=()=>{
     
 }
 
+/*--------- remove from task to be done---------- */
 function completeTask(link){
  link.onclick=(e)=>{
      let value=e.target.parentElement.innerText
@@ -33,6 +34,8 @@ function completeTask(link){
      console.log(value)
  }
 }
+
+/*--------- add in completed task and deleting by one---------- */
 let completedList=document.getElementById("complete-list")
 console.log(completedList)
 function addInCompleted(text){
@@ -53,6 +56,8 @@ function addInCompleted(text){
       console.log(parent)
    }
 }
+
+/*--------- delelting all items in once---------- */
 let dltBtn=document.getElementById("deleteBtn");
 dltBtn.onclick=()=>{
 completedList.innerHTML="";
